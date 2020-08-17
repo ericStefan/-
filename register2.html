@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Login</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="/creditchain/css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="/creditchain/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="/creditchain/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="/creditchain/css/base.css" rel="stylesheet" type="text/css" />
+    <link href="/creditchain/css/login.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="main.css">
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="main-interface ">
+        <form class="login-form">
+
+            <div class="form-group">
+                <label>用户名</label>
+                <input type="text" class="form-control" placeholder="用户名" id="uName" />
+            </div>
+            <div class="form-group">
+                <label>工号</label>
+                <input type="text" class="form-control" placeholder="工号" id="jobNo" />
+            </div>
+            <div class="form-group">
+                <label>组别</label>
+                <select class="form-control" name="group" id="group">
+                    <option>第一组</option>
+                    <option>第二组</option>
+                    <option>第三组</option>
+                    <option>第四组</option>
+                    <option>第五组</option>
+                    <option>第六组</option>
+                    <option>第七组</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>职级</label>
+                <select id="role" class="form-control">
+                    <option>组员</option>
+                    <option>组长</option>
+                    <option>管理员</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>请输入密码</label>
+                <input type="password" class="form-control" placeholder="请输入密码" id="pwd" />
+                <div>
+                    <button onclick="register()" type="button" class="btn btn-primary btn-lg btn-block">注册</button>
+                </div>
+        </form>
+    </div>
+
+
+    <script type="text/javascript">
+        function register() {
+            $.ajax({
+                url: "",
+                data: { "uName": $("#uName").val(), "jobNo": $("#jobNo").val(), "group": $("#group").val(), "role": $("#role").val(), "pwd": $("#pwd").val(), "re-pwd": $("#re-pwd").val() },
+                success: ""
+
+            });
+        }
+    </script>
+</body>
+
+</html>
